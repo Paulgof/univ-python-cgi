@@ -1,4 +1,5 @@
 import cgi
+import os
 
 import db
 
@@ -10,16 +11,16 @@ def handle():
     table_name = params.getfirst('obj', None)
     object_id = params.getfirst('id', None)
 
-    headers = {
-        'Status': '302 Moved',
-        'Location': '/'
-    }
+    referer = os.environ['HTTP_REFERER']
 
+    headers = '\n'.join([
+        'Status: 302 Moved',
+        'Location: {}'.format(referer)
+    ])
     if table_name in existing_tables:
         db.delete_object_from(table_name, object_id)
-        headers['Location'] = '/cgi/{}s.py'.format(table_name)
 
-    print('\n'.join(['{}: {}'.format(key, value) for key, value in headers.items()]))
+    print(headers)
     print('''
     <html> 
         <head> 
@@ -27,7 +28,7 @@ def handle():
         <title>Redirecting back</title> 
         </head> 
     </html>
-    '''.format(headers['Location']))
+    '''.format(referer))
 
 
 handle()
