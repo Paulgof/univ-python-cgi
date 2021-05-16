@@ -1,0 +1,150 @@
+body {
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+header {
+    padding: 10px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+.header-links-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+header a {
+    display: inline-block;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.form-block {
+    background-color: lavender;
+    padding: 5px 10px;
+    margin: 5px 30%;
+}
+
+.form-block h3 {
+    text-align: center;
+}
+
+.form-block form {
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+form input, form select {
+    display: block;
+    width: 200px;
+    height: 20px;
+    padding: 1px;
+    border: 2px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    height: auto;
+}
+
+.time-wrapper {
+    display: flex;
+}
+
+.time-wrapper input {
+    display: inline-block !important;
+    width: 50px;
+    height: 20px;
+    flex: 1;
+}
+
+.time-wrapper span {
+    margin: 0 5px;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+    padding: 10px 0;
+}
+
+.table-wrapper td, .table-wrapper th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table-wrapper tr:nth-child(even){background-color: #f2f2f2;}
+
+.table-wrapper tr:hover {background-color: #ddd;}
+
+.table-wrapper th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table-wrapper caption {
+    font-size: 20px;
+}
+
+.new-object-info {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+
+ul {
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+ul a {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 19.5%;
+  text-align: center;
+  line-height: 3;
+  color: black;
+}
+
+
+ul a:link, ul a:visited, ul a:focus {
+  background: aqua;
+}
+
+ul a:hover {
+  background: orange;
+}
+
+ul a:active {
+  background: red;
+  color: white;
+}
+
+td a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: crimson;
+    text-decoration: none;
+}
